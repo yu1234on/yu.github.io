@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        body {
+            background-color: #f5f5f5;
+            min-width: 1200px;
+        }
+        .Header {
+            background-color:#e6f4ff;
+            padding: 32px 0;
+            height: 249.337px;
+            .Header-inner {
+                width: 70%;
+                margin: 0 auto;
+                height: 249.337px;
+                .name {
+                    font-size: 200%;
+                    height: 32px;
+                }
+                .tip {
+                    margin-top: 12px;
+                    color: #626675;
+                    height: 16px;
+                }
+                .images {
+                    display:flex;
+                    justify-content: space-between;
+                    height: 189.337px;
+                    .images-item {
+                        flex-basis:32%;
+                        width: 0;
+                        margin-top: 8px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }  
+        .center {
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 24px;
+            .introduce {
+                display: flex;
+                background-color: #fff;
+                padding: 32px 16px;
+                border:solid 1px #e5e5e5 ;
+                box-shadow: 0 2px 3px -2px #d5d5d5;
+                .introduce-message {
+                    margin-right: 12px;
+                    .introduce-tips{
+                        display: flex;
+                        height: 12px;
+                        font-size: 12px;
+                        justify-content: flex-end;
+                        margin-bottom: 24px;
+                        .introduce-tips-item {
+                            border-right: 1px solid #eee;
+                            padding-right: 8px;
+                            margin-left:8px ;
+                            .name {
+                                color: #519cea;
+                                font-weight: 500;
+                            }
+                            .num {
+                                color: #888;
+                            }
+                        }
+                        .last {
+                            border-right: 0px solid #eee;
+                        }
+                    }
+                }
+                .introduce-text p {
+                    font-size: 14px;
+                    line-height: 24px;
+                    text-indent: 2em;
+                }
+                .introduce-table {
+                    margin-top: 24px;
+                    .row {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        padding: 12px 0px;
+                        .column {
+                            display: flex;
+                            flex-basis: 50%;
+                            .name {
+                                color: #333;
+                                font-weight: bold;
+                                flex-basis: 25%;
+                            }
+                            .data {
+                                color: #747474
+                            }
+                        }
+                    }
+                }
+                .main-image {
+                    flex-basis: 25%;
+                    flex-shrink: 0;
+                    width: 0px;
+                }
+            }
+            .base {
+                background-color: #fff;
+                padding: 32px 16px;
+                border:solid 1px #e5e5e5 ;
+                box-shadow: 0 2px 3px -2px #d5d5d5;
+                margin-top: 12px;
+                .base-message {
+                    border-left: 10px solid #003eb3;
+                    margin: 0px -16px;
+                    padding: 0px 16px;
+                    display: flex;
+                    align-items: center;
+                    .title {
+                        font-size: 150%;
+                    }
+                    .line {
+                        flex-grow: 1;
+                        margin-left: 12px;
+                        height: 1px;
+                        background: #eee;
+                    }
+                }
+                .base-table {
+                    margin-top: 24px;
+                    padding: 0 10px;
+                    .row {
+                        display: flex;
+                        padding: 12px 0;
+                        font-size: 6px;
+                        border-bottom: 1px dotted #ccc ;
+                        .column {
+                            flex-basis: 50%;
+                            display: flex;
+                            .name {
+                                color: #999;
+                                font-weight: bold;
+                                flex-basis: 15%;
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+            .actor {
+                background-color: #fff;
+                padding: 32px 16px;
+                border:solid 1px #e5e5e5 ;
+                box-shadow: 0 2px 3px -2px #d5d5d5;
+                margin-top: 12px;
+                .actor-introduce {
+                    border-left: 10px solid #003eb3;
+                    margin-left: -16px;
+                    padding-left: 16px;
+                    display: flex;
+                    align-items: center;
+                    .title {
+                        font-size: 150%;
+                    }
+                    .line {
+                        flex-grow: 1;
+                        background-color:#eee;
+                        height: 1px;
+                        margin-left: 12px;
+                    }
+                }
+                .actor-list {
+                    margin-top: 24px;
+                    padding: 0 10px;
+                    .actor-item {
+                        display: flex;
+                        padding-bottom: 16px;
+                        margin-bottom: 16px;
+                        border-bottom: 1px solid #e4e4e4;
+                        .actor-image {
+                        width: 135px;
+                         }
+                        .actor-message {
+                            margin-left: 16px;
+                            .role-name {
+                                color: #003eb3;
+                                font-weight: 500;
+                                margin-bottom: 12px;
+                            }
+                            .actor-name {
+                                font-size: 13px;
+                                margin-bottom: 12px;
+                                .key {
+                                    color: #999;
+                                }   
+                            }
+                            .actor-text {
+                                font-size: 13px;
+                                line-height: 1.3;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Header">
+        <div class="Header-inner">
+            <h1 class="name">长相思</h1>
+            <p class="tip">2023年秦榛（总导）杨欢执导的电视剧</p>
+            <div class="images">
+                <img class="images-item" src="https://community.image.video.qpic.cn/app_community_08f6bf-0_379392983_1690190492984068?imageView2/2/w/1200" alt="">
+                <img class="images-item" src="http://puui.qpic.cn/vcover_hz_pic/0/mzc003ulvjb5wgt1690206718/498?max_age=7776000" alt="">
+                <img class="images-item" src="https://community.image.video.qpic.cn/app_community_08f6bf-0_1299305391_1690208093415653?imageView2/2/w/1200" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="introduce">
+            <div class="introduce-message">
+                <div class="introduce-tips">
+                    <div class="introduce-tips-item">
+                        <span class="name">收藏</span>
+                        <span class="num">2200</span>
+                    </div>
+                    <div class="introduce-tips-item">
+                        <span class="name">点赞</span>
+                        <span class="num">22000</span>
+                    </div>
+                    <div class="introduce-tips-item last">
+                        <span class="name">转发</span>
+                        <span class="num">12000</span>
+                    </div>
+                </div>
+                <div class="introduce-text">
+                    <p>
+                        《长相思》是有吴锦源执导，杨紫、张晚意、邓伟、檀健次等主演的古装情景剧。
+                    </p>
+                    <p>
+                        该剧于2023年7月24日腾讯视频首播，并陆续在中国大陆各地方电视台重播。
+                    </p>
+                    <p>
+                        该剧故事：大荒内，人、神、妖混居，西炎、辰荣、皓翎三国鼎立。流落大荒的皓翎国王姬玖瑶（小夭）成为了“无处可去、
+                        无人可依、无力自保”的玟小六，他悬壶为生恣意不羁 
+                    </p>
+                    <p>
+                        曾与小夭青梅竹马的西炎国王孙玱玹去了皓翎国做质子。玟小六意外救了垂危的青丘公子涂山璟，朝夕相处中二人情愫渐生；
+                        玟小六又与九头妖相柳不打不相识，惺惺相惜结为知己。玟小六和玱玹相见不相识,几经波折，才终与玱玹相认，恢复王姬身份。
+                    </p>
+                    <p>
+                        最终，玱玹舍私情要王座，相柳守义战死、小夭与涂山璟隐逸江湖。
+                    </p>
+                </div>
+                <div class="introduce-table">
+                    <div class="row">
+                        <div class="column">
+                            <span class="name">类型</span>
+                            <span class="data">爱情、古装、奇幻</span>
+                        </div>
+                        <div class="column">
+                            <span class="name">导演</span>
+                            <span class="data">吴锦源</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <span class="name">首播时间</span>
+                            <span class="data">2023年7月24日</span>
+                        </div>
+                        <div class="column">
+                            <span class="name">中文名</span>
+                            <span class="data">长相思</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="main-image" src="https://community.image.video.qpic.cn/app_community_08f6bf-2_1770294649_1690157161567208?imageView2/2/w/400" alt="">
+        </div>
+        <div class="base">
+            <div class="base-message">
+                <h2 class="title">基本信息</h2>
+                <div class="line"></div>
+            </div>
+            <div class="base-table">
+                <div class="row">
+                    <div class="column">
+                        <span class="name">中文名</span>
+                        <span class="data">长相思</span>
+                    </div>
+                    <div class="column">
+                        <span class="name">主演</span>
+                        <span class="data">杨紫、张晚意、邓伟、檀健次</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <span class="name">外文名字</span>
+                        <span class="data">Lost You Foreover</span>
+                    </div>
+                    <div class="column">
+                        <span class="name">集数</span>
+                        <span class="data">48</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <span class="name">出品公司</span>
+                        <span class="data">企鹅影视、星莲影视</span>
+                    </div>
+                    <div class="column">
+                        <span class="name">每集长度</span>
+                        <span class="data">47分钟</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <span class="name">导演</span>
+                        <span class="data">秦榛、杨欢</span>
+                    </div>
+                    <div class="column">
+                        <span class="name">编剧</span>
+                        <span class="data">桐华</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actor">
+            <div class="actor-introduce">
+                <h2 class="title">演员介绍</h2>
+                <div class="line"></div>
+            </div>
+            <ul class="actor-list">
+                <li class="actor-item">
+                    <img class="actor-image" src="https://community.image.video.qpic.cn/app_community_08f6bf-0_1848834233_1690177534313910?imageView2/2/w/1100" alt="">
+                    <div class="actor-message">
+                        <div class="role-name">皓翎玖瑶</div>
+                        <div class="actor-name">
+                            <span class="key">演员</span>
+                            <span class="name">杨紫</span>
+                        </div>
+                        <p class="actor-text">
+                            小夭是个有独立思想且善良的女孩子。与相柳并不美好的相遇，以德报怨，屡次为其献血，帮相柳拿药，藏膩相柳。对叶十七更是有救命之恩。对表哥，拿命救了两次。对于亲人朋友，乃至陌生人就是毫无保留的去付出。
+                        </p>
+                    </div>
+                </li>
+                <li class="actor-item">
+                    <img class="actor-image" src="https://pics0.baidu.com/feed/b3fb43166d224f4aa6bfee0866c00c5e9822d14f.jpeg@f_auto?token=bbf909152c3d50700bbac67e03790b52" alt="">
+                    <div class="actor-message">
+                        <div class="role-name">玱玹</div>
+                        <div class="actor-name">
+                            <span class="key">演员</span>
+                            <span class="name">张晚意</span>
+                        </div>
+                        <p class="actor-text">曾与小夭青梅竹马的西炎国王孙玱玹去了皓翎国做质子，即使寄人篱下、隐忍蛰伏，为了寻找小夭走遍大荒，来到清水镇。</p>
+                    </div>
+                </li>
+                <li class="actor-item">
+                    <img class="actor-image" src="https://b0.bdstatic.com/3b5b17695fa6168bb2db0978b8f67aa8.jpg@s_2,w_366,h_366" alt="">
+                    <div class="actor-message">
+                        <div class="role-name">涂山璟</div>
+                        <div class="actor-name">
+                            <span class="key">演员</span> 
+                            <span class="name">邓为</span>
+                        </div>
+                        <p class="actor-text">清水镇的日子平淡温馨，玟小六意外救了垂危的青丘公子涂山璟，朝夕相处中二人情愫渐生；</p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    
+</body>
+</html>
